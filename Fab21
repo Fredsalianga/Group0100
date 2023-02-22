@@ -1,0 +1,2 @@
+if(( $avg > 50 )) works but (( $avg -gt 50 )) doesn't  !!!
+so for (( $avg > 50 )) is equivalent to [ $avg -gt 50 ]
