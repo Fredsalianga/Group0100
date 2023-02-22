@@ -21,7 +21,7 @@ do\
    num=$\{numbers[i]\}\
 #  if [ $num > $maxNumber ]\
    if ((num > maxNumber))\
-   then\
+   then
       maxNumber=$num\
    fi\
 #   echo $\{numbers[i]\}\
@@ -57,3 +57,15 @@ do\
    touch $nextFileName\
    nextNumber=$nextNumber+1\
 done\
+\f0\fs26 \cf0 yourName=Fred\
+\
+# Find all files whose name starts with <yourName> and extract determine the\
+# highest number.\
+\
+numbers=($(ls | grep ^$yourName | grep -oE [0-9]\\+))\
+\
+declare -i maxNumber=0\
+declare -i num=0\
+\
+for (( i=0; i<$\{#numbers[@]\}; i++ ))\
+do\
