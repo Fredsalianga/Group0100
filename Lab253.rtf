@@ -50,3 +50,10 @@ echo "File creation done!"\
 
 #hello today is a good day
 #test 1
+do\
+   echo "Creating file number $i"\
+   nextFileName="$yourName$nextNumber"\
+   echo $nextFileName\
+   touch $nextFileName\
+   nextNumber=$nextNumber+1\
+done\
